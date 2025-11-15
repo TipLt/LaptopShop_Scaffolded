@@ -55,12 +55,19 @@ namespace LaptopShop.ViewModels
             {
                 SessionManager.Instance.Login(user);
                 
-                // Close login window and open main window
+                // Open main window
                 var mainWindow = new Views.MainWindow();
                 mainWindow.Show();
                 
                 // Close login window
-                Application.Current.Windows[0]?.Close();
+                foreach (Window window in Application.Current.Windows)
+                {
+                    if (window is Views.LoginWindow)
+                    {
+                        window.Close();
+                        break;
+                    }
+                }
             }
             else
             {
