@@ -58,7 +58,8 @@
                          FontSize="13"
                          BorderBrush="#BDC3C7"
                          BorderThickness="1"
-                         Margin="0,0,0,15"/>
+                         Margin="0,0,0,15"
+                         KeyDown="InputField_KeyDown"/>
 
                 <!-- Password -->
                 <TextBlock Text="Password:" 
@@ -72,7 +73,8 @@
                              BorderBrush="#BDC3C7"
                              BorderThickness="1"
                              Margin="0,0,0,15"
-                             PasswordChanged="PasswordBox_PasswordChanged"/>
+                             PasswordChanged="PasswordBox_PasswordChanged"
+                             KeyDown="InputField_KeyDown"/>
 
                 <!-- Error Message -->
                 <TextBlock Text="{Binding ErrorMessage}" 
